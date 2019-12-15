@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const app = express();
@@ -16,8 +17,14 @@ db.once('open', () => {
 });
 
 
-app.get('/', (req, res) => {
+app.get('/api/', (req, res) => {
   res.json({hello: 'world'})
+});
+
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 app.listen(process.env.PORT || 4000, () => console.log('APP listening on 4000'));
