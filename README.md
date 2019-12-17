@@ -50,7 +50,7 @@ app.listen(process.env.PORT || 4000, () => console.log('APP listening on 4000'))
 * Next, we want to connect our server to MongoDB. If you have not done so, create a free starter account with mongodb at https://www.mongodb.com/cloud/atlas .  In the mongodb atlas web interface, do the following;
     * Create a new cluster 
     * Create a database, give it a database name and you will be requested to create a collection at the same time. You can state a name and make it an empty collection. Note this is a development database. You will have to create another database for production.
-    * As part of our DB setup we will allow all its to connect to our database since your apps ip can change from time to time. To do this go to ‘Network Access’ on the side bar. In the IP whitelist tab, click on “Add Ip Adress” and allow all ips.
+    * As part of our DB setup we will allow all ips connect to our database since your apps ip can change from time to time. To do this go to ‘Network Access’ on the side bar. In the IP whitelist tab, click on “Add Ip Adress” and allow all ips.
     * On the sidebar click on clusters and locate the connect button. Click connect and then “connect your appllication”. 
     * You will see a mongo url string starting with “mongodb+srv:…”. Note that you will have to replace <password> with the correct user password you have created.
     * Repeat the above steps and create a production database. You can namespace both databases like so, helloword_development for dev and helloworld_production for production.
