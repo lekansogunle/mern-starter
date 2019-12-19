@@ -44,7 +44,7 @@ app.listen(process.env.PORT || 4000, () => console.log('APP listening on 4000'))
   
 * Now is good time to create a commit.
     * Create a .gitignore file at the root of your project and add `/node_modules`. This will prevent you  from checking in your node_modules. 
-    * In the client directory, run `rm -rf .git` this will uninitialise this directory as a separate git repo.
+    * In the client directory, run `rm -rf .git` this will uninitialise this directory as a separate git repo. For windows users run `rm .git -r -fo`.
     *  At this point you can do a git init at the root of the app, commit your work and push to your remote repository. And maybe take a drink.
 
 * Next, we want to connect our server to MongoDB. If you have not done so, create a free starter account with mongodb at https://www.mongodb.com/cloud/atlas .  In the mongodb atlas web interface, do the following;
