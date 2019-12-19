@@ -100,3 +100,5 @@ The first script helps start the app. But more importantly, the next “heroku-p
 * Create a new heroku app `heroku create`.  When you do this heroku create a new node app for you. You can check it out on your heroku web interface.
 * Run `git push heroku master` this is to push your app to heroku . On your app settings page in heroku add a config var which is an environment variable. You only have the DB_URL, add DB_URL as key and add the mongodb url string as value.
 * View your new production app with `heroku open`. Heroku will open a url and you can see your MERN app live.
+
+I have built a sample app that makes use of this structure, https://github.com/lekansogunle/resto. It is a restaurant app, you should take a look and note how I seperated backend directories into controllers, models, and routes connected them back to the main index.js server file.
