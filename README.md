@@ -98,6 +98,7 @@ We want to declare all backend routes before we start to locate frontend by the 
 The first script helps start the app. But more importantly, the next “heroku-postbuild” will be run by Heroku every time we make a new deploy. What is simply to go into the client/React app, install dependencies, and create a fresh production build in /build with we have configured to be served by express. 
 * From your terminal login to heroku, run `heroku login`. Add in your heroku credentials
 * Create a new heroku app `heroku create`.  When you do this heroku create a new node app for you. You can check it out on your heroku web interface.
+* Go into your client folder and delete the hidden .git which was automatically created by `create-react-app`. Come back to the root of your project, add your changes, and make commit.
 * Run `git push heroku master` this is to push your app to heroku . On your app settings page in heroku add a config var which is an environment variable. You only have the DB_URL, add DB_URL as key and add the mongodb url string as value.
 * View your new production app with `heroku open`. Heroku will open a url and you can see your MERN app live.
 
